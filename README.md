@@ -9,7 +9,7 @@ This program will attempt to hijack a chosen victim's social media account and t
     
    For simplicity of this design we will be using a known IP. 
    
-2. Once a target has been selected, we will then use python and scapy to perform arp poisoning on the target machine to spoof the dns. The domains we will be spoofing will consist of social media login sites such as Facebook, Twitter, Instagram, etc... so that we can redirect the dns request to our fake login page.
+2. Once a target has been selected, we will then use python and scapy to perform ARP poisoning on the target machine to spoof the DNS. The domains we will be spoofing will consist of social media login sites such as Facebook, Twitter, Instagram, etc... so that we can redirect the DNS request to our fake login page.
 
 3. Once the target reaches our fake login page we will steal their sign in credentials and use them to access their social media account. 
 
@@ -27,4 +27,4 @@ From the above screenshots, we see that the Attackers IP on the network is 10.0.
 and the Target's IP is 10.0.2.4
 
 #### _ARP Poisoning_
-In order to redirect the users dns request to their social media accounts, we need to poison their ARP cache  
+In order to redirect the target's DNS request we need to insert our machine between the target machine and the gateway router. 
