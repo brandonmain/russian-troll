@@ -20,7 +20,7 @@ This example will use two Kali Linux machines ran from a VirtualBox virtual mach
 
 First, we will get the IP addresses of both of our machines on the network. 
 
-<img src="img/ip1.png?raw=true"/>
+<img src="img/ip1.png?raw=true" width="200">
 
 ![](img/ip2.png "Target IP")
 
