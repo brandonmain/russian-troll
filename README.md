@@ -23,8 +23,8 @@ First, we will get the IP addresses of both of our machines on the network.
 <img src="img/ip_2.png?raw=true" width="500">
 <img src="img/ip_1.png?raw=true" width="500">
 </p>
-From the above screenshots, we see that the Attackers IP on the network is 192.168.56.102
-and the Target's IP is 192.168.56.101
+From the above screenshots, we see that the Attackers IP on the network is 10.0.2.15
+and the Target's IP is 10.0.2.4
 
 #### _ARP Poisoning_
 In order to redirect the users dns request to their social media accounts, we need to poison their ARP cache  
