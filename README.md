@@ -19,10 +19,9 @@ The In-Depth Analysis section will consist of an example and analysis of this ex
 This example will use two Kali Linux machines ran from a VirtualBox virtual machine on my host machine running MacOS. One Kali machine will be the attacker and the other Kali machine will be the target.
 
 First, we will get the IP addresses of both of our machines on the network. 
-
+<p align="center">
 <img src="img/ip1.png?raw=true" width="500">
-
 <img src="img/ip2.png?raw=true" width="500">
-
+</p>
 From the above screenshots, we see that the Attackers IP on the network is 192.168.56.102
 and the Target's IP is 192.168.56.101
