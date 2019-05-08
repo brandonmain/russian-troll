@@ -35,3 +35,4 @@ Using Wireshark, I started sniffing my own connection and loaded a web browser. 
 <img src="img/gateway.png?raw=true" width="500">
 </p>
 
+Modifying an ARP poisoning python script from https://pastebin.com/9Gpc9kxQ, we can 
