@@ -15,6 +15,7 @@ This program will attempt to hijack a chosen victim's social media account and t
 
 ## In-Depth Analysis
 The In-Depth Analysis section will consist of an example and analysis of this example to demonstrate the procedure.
-#### _Identifying the target_
+#### _Identifying the Target_
 This example will use two Kali Linux machines ran from a VirtualBox virtual machine on my host machine running MacOS. One Kali machine will be the attacker and the other Kali machine will be the target.
 
+First, we will get the IP addresses of both of our machines on the network. 
