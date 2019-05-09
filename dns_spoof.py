@@ -2,6 +2,7 @@ from scapy import *
 import sys
 import os
 import time
+from uuid import getnode as get_mac
 
 try:
     interface = raw_input("[*] Enter Desired Interface: ")
@@ -65,4 +66,5 @@ def mitm():
             break
 
 
-mitm()
+if __name__ == '__main__':
+    mitm()
