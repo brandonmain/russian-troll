@@ -29,8 +29,14 @@ and the Target's IP is 10.0.2.4
 #### _arpspoof_
 In order to redirect the target's DNS request we need to insert our machine between the target machine and the gateway router. 
 
-Using the `arp -a` command we can identify IP addresses on the netwrok as well as the gateway. From the below screnshot we see that the gateway is located at IP address 10.0.2.1 
+Using the `arp -a` command we can identify IP addresses on the network as well as the gateway. From the below screnshot we see that the gateway is located at IP address 10.0.2.1 
 
 <p align="center">
 <img src="img/gateway.png?raw=true" width="500">
+</p>
+
+Before we iniate the arpspoof, we first must set our connection to allow packets to ve forwarded us the command ` echo 1 > /proc/sys/net/ipv4/ip_forward` Without setting this packets will get stopped at our machine and not be forwarded.
+
+<p align="center">
+<img src="img/forward.png?raw=true" width="500">
 </p>
