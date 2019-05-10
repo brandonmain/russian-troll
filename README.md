@@ -9,7 +9,7 @@ This program will attempt to hijack a chosen victim's social media account and t
     
    For simplicity of this design we will be using a known IP. 
    
-2. Once a target has been selected, we will then use python and scapy to perform ARP poisoning on the target machine to spoof the DNS. The domains we will be spoofing will consist of social media login sites such as Facebook, Twitter, Instagram, etc... so that we can redirect the DNS request to our fake login page.
+2. Once a target has been selected, we will then use _arpspoof_ to spoof our MAC address to be the MAC address of the gateway router. This will allow us to capture all traffic from the target machine and then we can use _dnsspoof_ to reroute it. The domains we will be spoofing will consist of social media login sites such as Facebook, Twitter, Instagram, etc... so that we can redirect the DNS request to our fake login page.
 
 3. Once the target reaches our fake login page we will steal their sign in credentials and use them to access their social media account. 
 
@@ -26,7 +26,7 @@ First, we will get the IP addresses of both of our machines on the network.
 From the above screenshots, we see that the Attackers IP on the network is 10.0.2.15
 and the Target's IP is 10.0.2.4
 
-#### _ARP Poisoning_
+#### _arpspoof_
 In order to redirect the target's DNS request we need to insert our machine between the target machine and the gateway router. 
 
 Using Wireshark, I started sniffing my own connection and loaded a web browser. Doing so allows me to see that the gateway router is located at IP address 192.168.87.1 as displayed in the below screenshot.
