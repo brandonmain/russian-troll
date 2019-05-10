@@ -35,8 +35,14 @@ Using the `arp -a` command we can identify IP addresses on the network as well a
 <img src="img/gateway.png?raw=true" width="500">
 </p>
 
-Before we iniate the arpspoof, we first must set our connection to allow packets to ve forwarded us the command ` echo 1 > /proc/sys/net/ipv4/ip_forward` Without setting this packets will get stopped at our machine and not be forwarded.
+Before we initiate the arpspoof, we first must set our connection to allow packets to be forwarded using the command ` echo 1 > /proc/sys/net/ipv4/ip_forward` Without setting this packets will get stopped at our machine and not be forwarded.
 
+<p align="center">
+<img src="img/forward.png?raw=true" width="500">
+</p>
+
+Now that we are ready to begin capturing ARP packets and forwarding requests, we will execute _arpspoof_.
+We use -t to specify the target machine to spoof replys to and -r to specify the router we are spoofing as. 
 <p align="center">
 <img src="img/forward.png?raw=true" width="500">
 </p>
