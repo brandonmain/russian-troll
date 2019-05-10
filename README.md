@@ -29,7 +29,7 @@ and the Target's IP is 10.0.2.4
 #### _arpspoof_
 In order to redirect the target's DNS request we need to insert our machine between the target machine and the gateway router. 
 
-Using Wireshark, I started sniffing my own connection and loaded a web browser. Doing so allows me to see that the gateway router is located at IP address 192.168.87.1 as displayed in the below screenshot.
+Using the `arp -a` command we can identify IP addresses on the netwrok as well as the gateway. From the below screnshot we see that the gateway is located at IP address 10.0.2.1 
 
 <p align="center">
 <img src="img/gateway.png?raw=true" width="500">
