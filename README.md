@@ -54,6 +54,6 @@ Before we can spoof the DNS we must configure the /etc/hosts file to route reply
 </p>
 
 <p align="center">
-<img src="img/etc_hots_edit.png?raw=true" width="500">
+<img src="img/etc_hosts_edit.png?raw=true" width="500">
 </p>
 
