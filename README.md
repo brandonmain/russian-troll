@@ -23,13 +23,13 @@ First, we will get the IP addresses of both of our machines on the network.
 <img src="img/ip_2.png?raw=true" width="500">
 <img src="img/ip_1.png?raw=true" width="500">
 </p>
-From the above screenshots, we see that the Attackers IP on the network is 10.0.2.15
-and the Target's IP is 10.0.2.4
+From the above screenshots, we see that the Attackers IP on the network is 192.168.87.35
+and the Target's IP is 192.168.87.34
 
 #### _arpspoof_
 In order to redirect the target's DNS request we need to insert our machine between the target machine and the gateway router. 
 
-Using the `arp -a` command we can identify IP addresses on the network as well as the gateway. From the below screnshot we see that the gateway is located at IP address 10.0.2.1 
+Using the `arp -a` command we can identify IP addresses on the network as well as the gateway. From the below screnshot we see that the gateway is located at IP address 192.168.87.1
 
 <p align="center">
 <img src="img/gateway.png?raw=true" width="500">
@@ -45,5 +45,15 @@ Now that we are ready to begin capturing ARP packets and forwarding requests, we
 We use -i to specify the network interface, -t to specify the target machine to spoof replys to, and -r to specify the router we are spoofing as. 
 <p align="center">
 <img src="img/arpspoof.png?raw=true" width="500">
+</p>
+
+#### _dnsspoof_
+Before we can spoof the DNS we must configure the /etc/hosts file to route replys to a site like "www.twitter.com" to our machines IP instead. We can do this by adding the line `<OUR_IP>  www.twitter.com` into then /etc/hosts file.
+<p align="center">
+<img src="img/etc_hosts.png?raw=true" width="500">
+</p>
+
+<p align="center">
+<img src="img/etc_hots_edit.png?raw=true" width="500">
 </p>
 
