@@ -57,3 +57,4 @@ Before we can spoof the DNS we must configure the /etc/hosts file to route reply
 <img src="img/etc_hosts_edit.png?raw=true" width="500">
 </p>
 
+ Next we need a fake site to use to phish the targets credentials from. The github repository [shellphish](https://github.com/thelinuxchoice/shellphish/tree/master/sites) contains a miriad of great popular social media site mock ups. 
