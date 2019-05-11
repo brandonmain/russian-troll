@@ -42,7 +42,8 @@ Before we initiate the arpspoof, we first must set our connection to allow packe
 </p>
 
 Now that we are ready to begin capturing ARP packets and forwarding requests, we will execute _arpspoof_.
-We use -t to specify the target machine to spoof replys to and -r to specify the router we are spoofing as. 
+We use -i to specify the network interface, -t to specify the target machine to spoof replys to, and -r to specify the router we are spoofing as. 
 <p align="center">
 <img src="img/arpspoof.png?raw=true" width="500">
 </p>
+
