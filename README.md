@@ -74,3 +74,9 @@ Now that we have our phishing login ready to go we will start an apache webserve
 <p align="center">
 <img src="img/server.png?raw=true" width="500">
 </p>
+
+Finally we will initiate the _dnsspoof_ and begin redirecting twitter traffic to phish logins.
+
+<p align="center">
+<img src="img/dnsspoof.png?raw=true" width="500">
+</p>
