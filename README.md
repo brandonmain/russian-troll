@@ -57,4 +57,14 @@ Before we can spoof the DNS we must configure the /etc/hosts file to route reply
 <img src="img/etc_hosts_edit.png?raw=true" width="500">
 </p>
 
- Next we need a fake site to use to phish the targets credentials from. The github repository [shellphish](https://github.com/thelinuxchoice/shellphish/tree/master/sites) contains a miriad of great popular social media site mock ups. 
+ Next we need a fake site to use to phish the targets credentials from. The github repository [shellphish](https://github.com/thelinuxchoice/shellphish/tree/master/sites) contains a miriad of great popular social media site mock ups. First we'll clone this repo to our attacking machine and then place the contents of the _twitter_ file into the /var/www/html/ directory and replace index.html with the login.html file from the fake twitter site files. 
+ 
+<p align="center">
+<img src="img/fake-dir.png?raw=true" width="500">
+</p>
+
+Next we need to edit the php file index.php to pint to the index.html file.
+
+<p align="center">
+<img src="img/index_php.png?raw=true" width="500">
+</p>
