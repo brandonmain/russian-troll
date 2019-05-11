@@ -68,3 +68,9 @@ Next we need to edit the php file index.php to pint to the index.html file.
 <p align="center">
 <img src="img/index_php.png?raw=true" width="500">
 </p>
+
+Now that we have our phishing login ready to go we will start an apache webserver to host the site for us when a DNS request to www.twitter.com is made.
+
+<p align="center">
+<img src="img/server.png?raw=true" width="500">
+</p>
